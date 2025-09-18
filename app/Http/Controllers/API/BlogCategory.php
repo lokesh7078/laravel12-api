@@ -7,11 +7,9 @@ use Illuminate\Http\Request;
 
 class BlogCategory extends Controller
 {
-    protected $fillable = [
-        'name',
-        'slug',
-        'description',
-    ];
+    /**
+     * Display a listing of the resource.
+     */
     public function index()
     {
         //
@@ -47,6 +45,6 @@ class BlogCategory extends Controller
     public function destroy(string $id)
     {
         //
-
+        
     }
 }
