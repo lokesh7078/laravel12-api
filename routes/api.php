@@ -3,6 +3,7 @@
 use App\Http\Controllers\API\AuthController;
 use App\Http\Controllers\API\StudentApiController;
 use App\Http\Controllers\API\TestApiController;
+use App\Http\Controllers\API\BlogCategoryController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Laravel\Sanctum\Sanctum;
@@ -30,3 +31,10 @@ Route::get('/profile',[AuthController::class,'profile'])->name('profile');
 
 //  Route::get('/logout',[AuthController::class,'logout'])->name('logout');
 
+
+// Blog Category Routes
+
+Route::apiResource('categories', BlogCategoryController::class);
+
+
+Route::get('categories', [BlogCategoryController::class, 'index']);
